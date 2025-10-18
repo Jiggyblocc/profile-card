@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link href="index.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <article data-testid="test-profile-card" class="profile-card">
+    <div class="profile-header">
+      <!-- Avatar -->
+      <figure>
+        <img
+          data-testid="test-user-avatar"
+          src="https://images.unsplash.com/photo-1738750908048-14200459c3c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627"
+          alt="Official Portrait Photo of John Grey"
+        />
+      </figure>
+
+      <!-- Profile Info -->
+      <div class="profile-info">
+        <!-- Name & Bio -->
+        <h2 data-testid="test-user-name">John Grey</h2>
+        <p data-testid="test-user-bio">
+          Front-end designer that also doubles up as a content/technical writer!
+        </p>
+        <p data-testid="test-user-time">Joined 2 hours ago</p>
+
+        <!-- Social Links -->
+        <nav data-testid="test-user-social-links" class="social-links">
+          <ul>
+            <li>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-X"
+                ><i class="fa-brands fa-square-x-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                data-testid="test-user-social-github"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Hobbies & Dislikes -->
+        <div class="extra-info">
+          <section data-testid="test-user-hobbies">
+            <h3>Hobbies</h3>
+            <ul>
+              <li>Writing</li>
+              <li>Watching Messi</li>
+              <li>Watching Chelsea</li>
+            </ul>
+          </section>
+
+          <section data-testid="test-user-dislikes">
+            <h3>Dislikes</h3>
+            <ul>
+              <li>Manchester United</li>
+              <li>Arsenal</li>
+              <li>Anything involving Man U and Assnal</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
