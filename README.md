@@ -1,8 +1,9 @@
 Profile Card Project
 
-A clean, responsive Profile Card built with HTML and CSS, following HNG’s design specifications. The project demonstrates proper layout, accessibility, semantic HTML, and keyboard-friendly navigation.
+A clean, responsive multi-page personal profile site built with HTML, CSS, and JavaScript, following HNG’s Stage 1 design and functionality specifications.
+This project demonstrates layout mastery, accessibility, form validation, semantic HTML, and keyboard-friendly navigation.
 
-Table of Contents
+🧭 Table of Contents
 
 Overview
 
@@ -18,35 +19,60 @@ Technologies Used
 
 License
 
-Overview
+🧩 Overview
 
-This project is a single, reusable profile card component that displays:
+This project extends the Stage 0 single-page Profile Card into a multi-page web application.
+It now includes:
+
+Home Page (index.html) — Profile card displaying:
 
 User avatar
 
-Name and short bio
+Name and bio
 
-Join time
+Join time (updated live via JavaScript)
 
-Social links (X/Twitter, LinkedIn, GitHub)
+Social links
 
 Hobbies and dislikes
 
-It strictly follows HNG’s requirements, including semantic HTML, data-testid attributes for CSS and testing, and a responsive layout.
+About Page (about.html) — A reflective page showcasing:
 
-Features
+Bio and program goals
 
-Responsive design: Works on desktop and mobile screens
+Areas of low confidence
 
-Keyboard navigation: Links are focusable, with visible focus indicators
+A note to your future self
 
-Semantic HTML: Uses <article>, <section>, <figure>, <nav>
+Extra thoughts
 
-CSS best practices: Flexbox, spacing, shadows, and clean layered layout
+Contact Page (contact.html) — A simple contact form featuring:
 
-Accessible: Focus styles and semantic labeling improve screen reader support
+Full name, email, subject, and message fields
 
-Installation
+Built-in form validation using JavaScript
+
+Success and error feedback for user interaction
+
+Each page is fully responsive, semantic, and accessible — designed to meet the HNG technical standards.
+
+⚙️ Features
+
+✅ Multi-page layout — Includes Home, About, and Contact pages
+
+🧭 Navigation bar — Seamlessly links all pages
+
+♿ Accessibility-first — Semantic tags, proper labels, and keyboard support
+
+📱 Responsive design — Optimized for desktop, tablet, and mobile
+
+🧩 Form validation — Checks required fields, valid email format, and message length
+
+🕒 Dynamic time display — Shows current time in milliseconds (Home page)
+
+💅 Clean styling — Flexbox-based, with consistent spacing, shadows, and colors
+
+🚀 Installation
 
 Clone the repository:
 
@@ -62,32 +88,45 @@ Open the project in your browser:
 
 open index.html
 
-Usage
+🧠 Usage
 
-Replace the avatar URL with your own image.
+Open index.html to view your profile card.
 
-Update the user name, bio, hobbies, and dislikes in the HTML.
+Open about.html to view your reflections.
 
-Update social links to point to your own accounts.
+Open contact.html to test the contact form.
 
-The profile card is keyboard-friendly, allowing navigation using the Tab key.
+The form validates input:
 
-Accessibility
+All fields are required.
 
-All links are focusable via keyboard.
+Email must be valid (e.g., name@example.com).
 
-Focus styles are visible to indicate the active link.
+Message must be at least 10 characters long.
 
-Semantic HTML ensures screen readers interpret the content correctly.
+A success message appears when the form is correctly filled.
 
-Technologies Used
+♿ Accessibility
 
-HTML5
+All input fields include <label> elements linked via for attributes.
 
-CSS3
+Error messages use aria-describedby for screen readers.
 
-Font Awesome Icons
+Keyboard navigation is fully supported (use Tab to move through links/fields).
 
-License
+Semantic HTML elements (<main>, <section>, <nav>, <header>, <footer>) improve readability and accessibility.
 
+💻 Technologies Used
+
+HTML5 — Semantic and accessible structure
+
+CSS3 — Responsive, modern layout using Flexbox
+
+JavaScript (ES6) — DOM manipulation and form validation
+
+Font Awesome — For clean social media icons
+
+📜 License
+
+This project is open-source and free to use for learning and personal development.
 This project is open-source and free to use for learning and personal projects.
