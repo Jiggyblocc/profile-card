@@ -4,11 +4,16 @@ body {
     background-color: #777;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; 
+    min-height: 100vh; /* allows scrolling if content exceeds viewport */
     margin: 0;
-}
-
+    padding: 1rem 0; /* gives breathing space at top and bottom */
+  }
+  
+  body.home-page {
+    align-items: center;
+    padding: 3rem 0; /* padding only for the profile card page */
+  }
 /* ===== PROFILE CARD ===== */
 article[data-testid="test-profile-card"] {
     background-color: #fff;
@@ -132,6 +137,180 @@ div.extra-info {
     color: #444;
 }
 
+/* ===== ABOUT PAGE STYLING ===== */
+
+/* The main container that wraps the About page content */
+/* === About Page Layout === */
+.about-main {
+    background-color: #fff;
+    width: 70%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    line-height: 1.5;
+  
+    /* Centers everything within the visible screen */
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+/* Reduce space between sections */
+  .about-main section {
+    margin-bottom: 0.8rem;
+}
+  
+.about-main h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+  
+.about-main p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+  
+/* === Bottom Navigation === */
+/* === About Page Bottom Navigation === */
+.bottom-nav {
+    display: block;              /* Forces it to act as a full block element */
+    width: fit-content;          /* Shrinks to fit content */
+    margin: 2rem auto 0;         /* Centers horizontally below content */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;          /* Prevents inheritance from index page nav */
+    z-index: 5;
+}
+  
+.bottom-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.bottom-nav li {
+    margin: 0.4rem 0;
+    font-weight: 600;
+}
+  
+.bottom-nav a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+  
+.bottom-nav a:hover {
+    color: #007bff;
+}
+/*  CONTATCT PAGE SYLES */
+
+.contact-main {
+    background: #fff;
+    width: 70%;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+.contact-main h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+  
+.contact-main p.intro {
+    text-align: center;
+    color: #555;
+    margin-bottom: 1.25rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-form {
+    display: block; /* single column form */
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}  
+
+.form-group label {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 600;
+}  
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #222;
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: none;
+}
+
+.contact-textarea {
+  min-height: 120px; /* comfortable starting height */
+  resize: vertical;  /* allow user to expand vertically */
+}
+
+.contact-input:focus,
+.contact-textarea:focus,
+.contact-btn:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.12); /* visible focus ring */
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.08s ease, background 0.15s ease;
+}
+.contact-btn:hover { transform: translateY(-1px); background: #006ae6; }
+.contact-btn:active { transform: translateY(0); }
+  
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+  
+.success {
+    color: green;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}  
+  
+
 /* ===== RESPONSIVENESS ===== */
 @media (max-width: 768px) {
     article[data-testid="test-profile-card"] {
@@ -157,5 +336,83 @@ div.extra-info {
     img[data-testid="test-user-avatar"] {
         width: 120px;
         height: 120px;
+}
+    /* ===== ABOUT PAGE — TABLET VIEW ===== */
+@media (max-width: 768px) {
+    main.about-page {
+      width: 90%;
+      padding: 1.5rem;
     }
+  
+    main.about-page section {
+      margin-bottom: 1.5rem;
+    }
+  
+    main.about-page h2 {
+      font-size: 1.4rem;
+    }
+  
+    main.about-page p,
+    main.about-page li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  
+    nav ul {
+      gap: 1rem;
+      padding: 0.8rem 1.2rem;
+    }
+}
+/* ABOUT/CONTACT responsive additions */
+main.contact-main,
+.contact-main {
+  width: 90%;
+  padding: 1.25rem;
+  margin: 1.5rem auto;
+}
+
+.contact-textarea { min-height: 100px; }
+
+.contact-btn {
+  width: 100%; /* full width CTA on small screens */
+  padding: 0.75rem;
+}
+
+  /* ===== ABOUT PAGE — MOBILE VIEW ===== */
+@media (max-width: 480px) {
+    main.about-page {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    main.about-page h2 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    main.about-page p,
+    main.about-page li {
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem;
+    }
+  
+    nav ul li {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .contact-main { padding: 1rem; }
+    .contact-main h1 { font-size: 1.2rem; }
+    .form-group { gap: 0.25rem; }
+    .contact-btn { font-size: 1rem; }
+  }
+  
+  
 }
